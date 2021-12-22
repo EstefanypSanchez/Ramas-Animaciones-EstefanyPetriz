@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(251, 249, 252);
+    font-family: 'Signika Negative', sans-serif;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 1em;
+   
+    grid-template-areas: 
+    "header header header header"
+    "nosotros nosotros nosotros aside"
+    "texto texto texto aside"
+    "equipo equipo equipo aside"
+    "fotos fotos fotos aside";
+}
+
+#nav a{
+    text-decoration: none;
+    color: white;
+    display: flex;     
+    flex-direction: column; 
+    justify-content: center;
+    font-size: large;
+    row-gap: 15px;
+    margin-top: 50px;
+    
+}
+.grid header{
+   background-image: url("../images/banner.png");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 300px;
+   width: auto;
+   grid-area: header;
+}
+.nosotros{
+    
+    grid-area: nosotros;
+}
+.nosotros h1 {
+    color: gray;
+    text-align: center;
+}
+.texto {
+   
+    grid-area: texto;
+}
+.texto p{
+    color: gray;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: justify;
+}
+.equipo{
+    
+    grid-area: equipo;
+}
+.equipo h2{
+    color: gray;
+    text-align: center;
+}
+.fotos {
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    grid-area: fotos;
+}
+.aside{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    grid-area: aside;
+    background-color: cadetblue;
+    color: white;
+}
+.aside:hover{
+background-color: rgb(251, 249, 252);
+}
+@media screen and (max-width: 768px){
+    .grid {
+    grid-template-areas: 
+    "header header header header"
+    "nosotros nosotros nosotros nosotros"
+    "texto texto texto texto"
+    "aside aside aside aside"
+    "equipo equipo equipo equipo"
+    "fotos fotos fotos fotos"
+    }
+    .aside{
+        height: 200px;
+    }
+    #nav{
+        display: flex;     
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+    }
+    #nav a{
+        text-decoration: none;
+        color: gray;
+    }
+    .uno {
+        width: 190px;
+        height: 200px;
+    }
+    .dos{
+        width: 190px;
+        height: 200px;
+    }
+    .tres{
+        width: 190px;
+        height: 200px;
+    }
+}

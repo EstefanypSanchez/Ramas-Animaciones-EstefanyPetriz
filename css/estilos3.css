@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(251, 249, 252);
+    font-family: 'Signika Negative', sans-serif;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    grid-template-areas: 
+    "header header header header"
+    "titulo titulo titulo titulo"
+    "img img img aside"    
+    ;
+
+}
+#nav a{
+    text-decoration: none;
+    color: white ;
+    display: flex;     
+    flex-direction: column; 
+    justify-content: center;
+    font-size: large;
+    row-gap: 15px;
+    margin-top: 50px;
+}
+.grid header{
+    background-image: url("../images/banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: auto;
+    grid-area: header;
+ }
+
+.titulo
+{
+   /* grid-column: 1 / 5;*/
+    display: flex;
+    justify-content: center;
+    color: gray;
+    grid-area: titulo;
+}
+.img{
+   /* grid-column: 1 / 4; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 20px;
+    grid-area: img;
+}  
+.aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    grid-area: aside;
+    background-color: cadetblue;
+    color: white;
+}
+.aside:hover{
+    background-color: rgb(251, 249, 252);
+}
+.uno{
+    transition: height 3s;
+}
+.uno:hover{
+    height: 350px;
+    width: 300px;
+}
+@media screen and (max-width: 768px){
+    .grid{
+        grid-template-areas: 
+    "header header header header"
+    "titulo titulo titulo titulo"
+    "img img img img"    
+    "aside aside aside aside"
+    ;
+    }
+    .aside{
+        height: 200px;
+    }
+    #nav{
+        display: flex;     
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+    }
+    #nav a{
+        text-decoration: none;
+        color: gray;
+    }
+    .img{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+        row-gap: 20px;
+    }
+         
+}
