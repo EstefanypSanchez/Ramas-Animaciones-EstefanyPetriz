@@ -105,6 +105,18 @@ body{
     height: 400px;
     width: 380px;
 }
+.cuatro:hover{
+    height: 380px;
+    width: 360px;
+}
+.cinco:hover{
+    height: 380px;
+    width: 360px;
+}
+.seis:hover{
+    height: 380px;
+    width: 360px;
+}
 @media screen and (max-width: 768px){
     .grid{
         grid-template-areas: 

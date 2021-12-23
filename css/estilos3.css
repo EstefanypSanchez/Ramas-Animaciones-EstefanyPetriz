@@ -73,6 +73,13 @@ body{
     height: 350px;
     width: 300px;
 }
+.dos{
+    transition: height 3s;
+}
+.dos:hover{
+    height: 350px;
+    width: 300px;
+}
 @media screen and (max-width: 768px){
     .grid{
         grid-template-areas: 
