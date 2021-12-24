@@ -1,0 +1,25 @@
+{
+  "name": "rama-y-animaciones---estefany-petriz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/prueba.scss css/estilos.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+      },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EstefanypSanchez/Ramas-Animaciones-EstefanyPetriz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EstefanypSanchez/Ramas-Animaciones-EstefanyPetriz/issues"
+  },
+  "homepage": "https://github.com/EstefanypSanchez/Ramas-Animaciones-EstefanyPetriz#readme",
+  "dependencies": {
+    "node-sass": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
